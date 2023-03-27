@@ -1,8 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component , OnInit} from '@angular/core';
 import { Employee } from 'src/app/models/Employee';
-import { e } from 'src/app/models/e';
-import { ResponseViewModel } from 'src/app/models/response-view-model';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Router } from '@angular/router';
 
