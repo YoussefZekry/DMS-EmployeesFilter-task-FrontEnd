@@ -3,6 +3,8 @@ import { Component , OnInit} from '@angular/core';
 import { Employee } from 'src/app/models/Employee';
 import { e } from 'src/app/models/e';
 import { ResponseViewModel } from 'src/app/models/response-view-model';
+import { EmployeeService } from 'src/app/services/employee.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employees',
@@ -12,27 +14,15 @@ import { ResponseViewModel } from 'src/app/models/response-view-model';
 export class EmployeesComponent implements OnInit{
   employees:Employee[]=[];
 
-  constructor(private _http:HttpClient){}
+  constructor(private employeeService: EmployeeService){}
   ngOnInit(): void {
    
   }
   
-
-  get():void{
-    let employee = new Employee();
-    employee.name="Youssef Zekry"
-    this._http.post<ResponseViewModel>("http://localhost:8080/employees",employee)
-    .subscribe(
-      response=>{
-          this.employees = response.body;
-          console.log(response);
-          console.log(this.employees);
-          console.log("aaaa");
-      },
-      error=>{
-        alert('error occurred');
-      }
-    );
+   employeesList(){
+    this.employeeService.employeesList().subscribe(data => {
+      this.employees = data;
+    });
   }
 
 }

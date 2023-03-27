@@ -64,7 +64,7 @@
           </div>
         </div>
         <div class="btn-block">
-          <button type="submit" href="/">View</button>
+          <button type="submit" (click)="employeesList()">View</button>
         </div>
       </div>
     </fieldset>
@@ -88,17 +88,17 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-       <td></td>
-	   <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
-       <td></td>
+      <tr *ngFor="let item of employees; let currentIndex=index">
+       <th>{{item.code}}</th>
+	   <td>{{item.name}}</td>
+       <td>{{item.birthDate}}</td>
+       <td>{{item.birthCity}}</td>
+       <td>{{item.id}}</td>
+       <td>{{item.department}}</td>
+       <td>{{item.jobTitle}}</td>
+       <td>{{item.directManager}}</td>
+       <td>{{item.contractType}}</td>
+       <td>{{item.status}}</td>
       </tr>
     </tbody>
   </table>
