@@ -6,80 +6,65 @@
       <legend>Employee Main Data</legend>
       <div class="colums">
         <div class="item">
-          <label for="fname">First Name</label>
-          <input id="fname" type="text" name="fname" />
+          <label for="eCode">Employee Code</label>
+          <input id="eCode" type="number" name="eCode" />
         </div>
         <div class="item">
-          <label for="lname"> Last Name</label>
-          <input id="lname" type="text" name="lname" />
+          <label for="eName">Employee Name</label>
+          <input id="eName" type="text" name="eName" />
         </div>
         <div class="item">
-          <label for="checkindate">Check-in Date</label>
-          <input id="checkindate" type="date" name="checkindate" />
-          <i class="fas fa-calendar-alt"></i>
+          <label for="birthDate">Birth Date</label>
+          <input id="birthDate" type="date" name="birthDate"/>
         </div>
         <div class="item">
           <label for="BirthCity">Birth City</label>
           <div class="title-block">
             <select>
-              <option value="title" selected>Title</option>
-              <option value="ms">Ms</option>
-              <option value="miss">Miss</option>
-              <option value="mrs">Mrs</option>
-              <option value="mr">Mr</option>
+              <option value="" disabled selected>select</option>
             </select>
           </div>
         </div>
         <div class="item">
-          <label for="phone">Phone Number</label>
-          <input id="phone" type="tel" name="phone" />
+          <label for="eId">Employee ID</label>
+          <input id="eId" type="number" name="eId" />
         </div>
         <div class="item">
-          <label for="BirthCity">Birth City</label>
+          <label for="department">Department</label>
           <div class="title-block">
             <select>
-              <option value="title" selected>Title</option>
-              <option value="ms">Ms</option>
-              <option value="miss">Miss</option>
-              <option value="mrs">Mrs</option>
-              <option value="mr">Mr</option>
+              <option value="" disabled selected>select</option>
             </select>
           </div>
         </div>
         <div class="item">
-          <label for="city">City</label>
-          <input id="city" type="text" name="city" />
+          <label for="jobTitle">Job Title</label>
+          <input id="jobTitle" type="text" name="jobTitle" />
         </div>
         <div class="item">
-          <label for="zip">Zip/Postal Code</label>
-          <input id="zip" type="text" name="zip" />
+          <label for="directManager">Direct Manager</label>
+          <input id="directManager" type="text" name="directManager" />
         </div>
         <div class="item">
-          <label for="BirthCity">Birth City</label>
+          <label for="contractType">Contract Type</label>
           <div class="title-block">
             <select>
-              <option value="title" selected>Title</option>
-              <option value="ms">Ms</option>
-              <option value="miss">Miss</option>
-              <option value="mrs">Mrs</option>
-              <option value="mr">Mr</option>
+              <option value="" disabled selected>select</option>
             </select>
           </div>
         </div>
         <div class="item">
-          <label for="BirthCity">Birth City</label>
+          <label for="status">Status</label>
           <div class="title-block">
             <select>
-              <option value="title" selected>Title</option>
-              <option value="ms">Ms</option>
-              <option value="miss">Miss</option>
-              <option value="mrs">Mrs</option>
-              <option value="mr">Mr</option>
+              <option value="" disabled selected>select</option>
+              <option value="available">Available</option>
+              <option value="unAvailable">Unavailable</option>
             </select>
           </div>
         </div>
         <div class="btn-block">
-          <button type="order" href="/">Confirm Order</button>
+          <button type="submit" href="/">View</button>
         </div>
       </div>
     </fieldset>
@@ -90,90 +75,30 @@
   <table class="table table-striped">
     <thead>
       <tr>
-        <th scope="col">Class name</th>
-        <th scope="col">Type</th>
-        <th scope="col">Hours</th>
-        <th scope="col">Trainer</th>
-        <th scope="col">Spots</th>
+        <th scope="col">Employee Code</th>
+        <th scope="col">Employee Name</th>
+        <th scope="col">Birth Date</th>
+        <th scope="col">Birth City</th>
+        <th scope="col">Employee Id</th>
+		<th scope="col">Department</th>
+        <th scope="col">Job Title</th>
+		<th scope="col">Direct Manager</th>
+        <th scope="col">Contract Type</th>
+        <th scope="col">Status</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Like a butterfly</td>
-        <td>Boxing</td>
-        <td>9:00 AM - 11:00 AM</td>
-        <td>Aaron Chapman</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>Mind & Body</td>
-        <td>Yoga</td>
-        <td>8:00 AM - 9:00 AM</td>
-        <td>Adam Stewart</td>
-        <td>15</td>
-      </tr>
-      <tr>
-        <td>Crit Cardio</td>
-        <td>Gym</td>
-        <td>9:00 AM - 10:00 AM</td>
-        <td>Aaron Chapman</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>Wheel Pose Full Posture</td>
-        <td>Yoga</td>
-        <td>7:00 AM - 8:30 AM</td>
-        <td>Donna Wilson</td>
-        <td>15</td>
-      </tr>
-      <tr>
-        <td>Playful Dancer's Flow</td>
-        <td>Yoga</td>
-        <td>8:00 AM - 9:00 AM</td>
-        <td>Donna Wilson</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>Zumba Dance</td>
-        <td>Dance</td>
-        <td>5:00 PM - 7:00 PM</td>
-        <td>Donna Wilson</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>Cardio Blast</td>
-        <td>Gym</td>
-        <td>5:00 PM - 7:00 PM</td>
-        <td>Randy Porter</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>Pilates Reformer</td>
-        <td>Gym</td>
-        <td>8:00 AM - 9:00 AM</td>
-        <td>Randy Porter</td>
-        <td>10</td>
-      </tr>
-      <tr>
-        <td>Supple Spine and Shoulders</td>
-        <td>Yoga</td>
-        <td>6:30 AM - 8:00 AM</td>
-        <td>Randy Porter</td>
-        <td>15</td>
-      </tr>
-      <tr>
-        <td>Yoga for Divas</td>
-        <td>Yoga</td>
-        <td>9:00 AM - 11:00 AM</td>
-        <td>Donna Wilson</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>Virtual Cycle</td>
-        <td>Gym</td>
-        <td>8:00 AM - 9:00 AM</td>
-        <td>Randy Porter</td>
-        <td>20</td>
+       <td></td>
+	   <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
+       <td></td>
       </tr>
     </tbody>
   </table>
