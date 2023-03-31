@@ -11,7 +11,7 @@
         </div>
         <div class="item">
           <label for="name">Employee Name</label>
-          <input id="name" type="text" formControlName="name"  name="name" /> <!--[(ngModel)] = "employees[0].name"-->
+          <input id="name" type="text" formControlName="name"  name="name" />
         </div>
         <div class="item">
           <label for="birthDate">Birth Date</label>
@@ -54,8 +54,8 @@
           <div class="title-block">
             <select formControlName="contractType">
               <option value="" disabled selected>select</option>
-              <option value="fullTime">Full time</option>
-              <option value="partTime">Part time</option>
+              <option value="Full Time">Full time</option>
+              <option value="Part Time">Part time</option>
               <!-- <option *ngFor="let employee of employees" [ngValue]="employee.contractType">{{employee.contractType}}</option> -->
             </select>
           </div>
