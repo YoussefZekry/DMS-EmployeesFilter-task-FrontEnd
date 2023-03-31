@@ -1,70 +1,78 @@
 <!-- <link rel="stylesheet" type="text/css" href="employees.component.css"> -->
 
 <div class="testbox">
-  <form>
+  <form [formGroup]="employeeFormGroup" (ngSubmit)="onSubmit()">
     <fieldset>
       <legend>Employee Main Data</legend>
       <div class="colums">
         <div class="item">
-          <label for="eCode">Employee Code</label>
-          <input id="eCode" type="number" name="eCode" />
+          <label for="code">Employee Code</label>
+          <input id="code" type="number" formControlName="code" name="code" />
         </div>
         <div class="item">
-          <label for="eName">Employee Name</label>
-          <input id="eName" type="text" name="eName" />
+          <label for="name">Employee Name</label>
+          <input id="name" type="text" formControlName="name"  name="name" /> <!--[(ngModel)] = "employees[0].name"-->
         </div>
         <div class="item">
           <label for="birthDate">Birth Date</label>
-          <input id="birthDate" type="date" name="birthDate"/>
+          <input id="birthDate" type="date" formControlName="birthDate" name="birthDate"/>
         </div>
         <div class="item">
-          <label for="BirthCity">Birth City</label>
+          <label for="birthCity">Birth City</label>
           <div class="title-block">
-            <select>
+            <select formControlName="birthCity">
               <option value="" disabled selected>select</option>
+              <option value="Cairo">Cairo</option>
+              <!-- <option *ngFor="let employee of employees" [ngValue]="employee.birthCity">{{employee.birthCity}}</option> -->
             </select>
           </div>
         </div>
         <div class="item">
-          <label for="eId">Employee ID</label>
-          <input id="eId" type="number" name="eId" />
+          <label for="id">Employee ID</label>
+          <input id="id" type="number" name="id" />
         </div>
         <div class="item">
           <label for="department">Department</label>
           <div class="title-block">
-            <select>
+            <select formControlName="department">
               <option value="" disabled selected>select</option>
+              <option value="UiUxDeveloper">UI/UX Developer</option>
+              <!-- <option *ngFor="let employee of employees" [ngValue]="employee.department">{{employee.department}}</option> -->
             </select>
           </div>
         </div>
         <div class="item">
           <label for="jobTitle">Job Title</label>
-          <input id="jobTitle" type="text" name="jobTitle" />
+          <input id="jobTitle" type="text" formControlName="jobTitle" name="jobTitle" />
         </div>
         <div class="item">
           <label for="directManager">Direct Manager</label>
-          <input id="directManager" type="text" name="directManager" />
+          <input id="directManager" type="text" formControlName="directManager" name="directManager" />
         </div>
         <div class="item">
           <label for="contractType">Contract Type</label>
           <div class="title-block">
-            <select>
+            <select formControlName="contractType">
               <option value="" disabled selected>select</option>
+              <option value="fullTime">Full time</option>
+              <option value="partTime">Part time</option>
+              <!-- <option *ngFor="let employee of employees" [ngValue]="employee.contractType">{{employee.contractType}}</option> -->
             </select>
           </div>
         </div>
         <div class="item">
           <label for="status">Status</label>
           <div class="title-block">
-            <select>
+            <select formControlName="status">
               <option value="" disabled selected>select</option>
-              <option value="available">Available</option>
-              <option value="unAvailable">Unavailable</option>
+              <option value="true">Available</option>
+              <option value="false">Unavailable</option>
+              <!-- <option *ngFor="let employee of employees" [ngValue]="employee.status">{{employee.status}}</option> -->
             </select>
           </div>
         </div>
         <div class="btn-block">
-          <button type="submit" (click)="employeesList()">View</button>
+          <button type="submit">View</button>
         </div>
       </div>
     </fieldset>
@@ -80,17 +88,17 @@
         <th scope="col">Birth Date</th>
         <th scope="col">Birth City</th>
         <th scope="col">Employee Id</th>
-		<th scope="col">Department</th>
+		    <th scope="col">Department</th>
         <th scope="col">Job Title</th>
-		<th scope="col">Direct Manager</th>
+		    <th scope="col">Direct Manager</th>
         <th scope="col">Contract Type</th>
         <th scope="col">Status</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let item of employees; let currentIndex=index">
+      <tr *ngFor="let item of employees">
        <th>{{item.code}}</th>
-	   <td>{{item.name}}</td>
+	     <td>{{item.name}}</td>
        <td>{{item.birthDate}}</td>
        <td>{{item.birthCity}}</td>
        <td>{{item.id}}</td>

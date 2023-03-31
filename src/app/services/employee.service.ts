@@ -10,9 +10,7 @@ export class EmployeeService {
   private baseURL = 'http://localhost:8080/employees';
   constructor(private httpClient: HttpClient) {}
 
-  employeesList(): Observable<Employee[]> {
-    let employee = new Employee();
-    // employee.name="Youssef Zekry"
+  employeesList(employee:Employee): Observable<any> {
     return this.httpClient.post<Employee[]>(`${this.baseURL}`, employee);
   }
 }
